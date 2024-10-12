@@ -10,3 +10,4 @@ int main(){
   printf("Integer size is: %d bytes\n", sizeof(charac));
   return 0;
 }
+// To compile run: gcc -o <outfile> problem-08.c

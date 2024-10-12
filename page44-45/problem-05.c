@@ -11,3 +11,4 @@ int main(){
   printf("The quotient is: %d and the remainder is: %d \n", quot, remn);
   return 0;
 }
+// To compile run: gcc -o <outfile> problem-05.c

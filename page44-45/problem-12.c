@@ -11,3 +11,5 @@ int main(){
   printf("\nHi everyone!\nMy name is %s, I was born on %s.\nYou can reach me by dialing %s", name, dob, tel);
   return 0;
 }
+// this is really ugly and there is a bug that makes it so the name only shows up under magic circumstances
+// To compile run: gcc -o <outfile> problem-12.c

@@ -10,3 +10,4 @@ int main() {
   printf("The product is: %0.3lf \n", prod);
   return 0;
 }
+// To compile run: gcc -o <outfile> problem-04.c

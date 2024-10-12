@@ -11,3 +11,4 @@ int main(){
   printf("%0.1f to the power of %0.1f is: %0.2f\n", base, exp, pow(base, exp));
   return 0;
 }
+// To compile run: gcc -o <outfile> problem-07.c -lm

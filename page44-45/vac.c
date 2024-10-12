@@ -13,3 +13,4 @@ int main(){
   return 0;
 }
 
+// To compile run: gcc -o <outfile> vac.c

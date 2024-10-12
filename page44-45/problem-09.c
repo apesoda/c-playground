@@ -12,3 +12,4 @@ int main(){
   printf("get swapped idiot your first number is now %d and your second number is now %d \n", num1, num2);
   return 0;
 }
+// To compile run: gcc -o <outfile> problem-09.c

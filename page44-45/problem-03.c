@@ -10,3 +10,4 @@ int main() {
   printf("The sum of the integers is: %d \n", sum);
   return 0;
 }
+// To compile run: gcc -o <outfile> problem-03.c

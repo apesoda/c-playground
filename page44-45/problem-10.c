@@ -6,3 +6,4 @@ int main(){
   printf("the ASCII value of the %c character is: %d \n", asciivalue, asciivalue);
   return 0;
 }
+// To compile run: gcc -o <outfile> problem-10.c

@@ -11,3 +11,4 @@ int main(){
   printf("The circumference of the area of the circle is %0.2f and the circumference is %0.2f \n", circ, area);
   return 0;
 }
+// To compile run: gcc -o <outfile> problem-06.c
