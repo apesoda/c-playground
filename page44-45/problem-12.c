@@ -8,7 +8,9 @@ int main(){
   scanf("%s", &dob);
   printf("Please enter your mobile number: ");
   scanf("%s", &tel);
-  printf("\nHi everyone!\nMy name is %s, I was born on %s.\nYou can reach me by dialing %s \n", name, dob, tel);
+  printf("\nHi everyone!\nMy name is %s", name);
+  printf("\nI was born on %s", dob);
+  printf("\nYou can reach me by dialing %s ",tel);
   return 0;
 }
 // this is really ugly and there is a bug that makes it so the name only shows up under magic circumstances
