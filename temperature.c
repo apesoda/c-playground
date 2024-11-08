@@ -12,7 +12,10 @@ int main() {
     printf("%0.1f degrees Celsius is %0.1f degrees Fahrenheit \n", cel, fah);
   }
   else if (opt == 2) {
-    printf("option 2");
+    printf("Enter your temperature in F: ");
+    scanf("%f", &fah);
+    cel = (fah - 32) * (5.0/9.0);
+    printf("%0.1f degrees Fahrenheit is %0.1f degrees Celsius \n", fah, cel);
   }
   else {
     printf("no\n");
