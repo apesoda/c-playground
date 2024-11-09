@@ -21,7 +21,7 @@ int main() {
     return 0;
   }
   else {
-    printf("no\n");
+    printf("You just had to do it, didn't you?\n");
   };
   return 0;
 }
