@@ -26,7 +26,7 @@ int main() {
       break;
     }
     else {
-      printf("\nYou just had to do it, didn't you?\n\n");
+      printf("\nERROR: Invalid input\n\n");
     }
   }
   return 0;
