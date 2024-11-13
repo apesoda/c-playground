@@ -12,3 +12,7 @@ int main(){
  * report 0;
  * */
 }
+
+/* ADD: While loop until guessed
+ * ADD: Give up function
+ * ADD: Game modes
