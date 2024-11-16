@@ -1,9 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 int main(){
   int random;
   int input;
-  random = rand() % (100 - 1 + 1) + 1;
+  srand(time(NULL));
+  random = rand() % 100 + 1;
   do {
     printf("Please enter a number between 1 and 100: ");
     scanf("%d",&input);
