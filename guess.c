@@ -3,7 +3,7 @@
 int main(){
   int random;
   int input;
-  random = rand() % 1 + 1;
+  random = rand() % 100 + 1;
   printf("Please enter a number between 1 and 100: ");
   scanf("%d",&input);
   if (input == random){
