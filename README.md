@@ -4,3 +4,6 @@ This repo is just a place where I store little projects as well as exercises and
 I'll occasionally update this whenever I get the time/remember to do so.
 
 Mostly random C practice and ramblings.
+
+18 Nov 24:
+Mostly focusing on silly little games
