@@ -2,6 +2,7 @@
 #include <SDL3/SDL.h>
 #include <SDL3/SDL_main.h>
 #include <SDL3/SDL_render.h>
+#include <SDL3/SDL_hints.h>
 
 /* We will use this renderer to draw into this window every frame. */
 static SDL_Window *window = NULL;
@@ -19,6 +20,7 @@ static const SDL_FRect texture_rects[TOTAL_TEXTURES] = {
 SDL_AppResult SDL_AppInit(void **appstate, int argc, char *argv[])
 {
     int i;
+
 
     if (!SDL_Init(SDL_INIT_VIDEO)) {
         SDL_ShowSimpleMessageBox(SDL_MESSAGEBOX_ERROR, "Couldn't initialize SDL!", SDL_GetError(), NULL);
