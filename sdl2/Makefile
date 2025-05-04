@@ -4,13 +4,13 @@
 CC := clang
 
 # set the compiler flags
-CFLAGS := `sdl2-config --libs --cflags` -ggdb3 -O0 --std=c99 -Wall -lSDL2_image -lm
+CFLAGS := `sdl2-config --libs --cflags` -ggdb3 -O0 --std=c99 -Wall -lSDL2_image -lm 
 
 # add header files here
 HDRS :=
 
 # add source files here
-SRCS := hello_animation.c
+SRCS := hello_keyboard.c
 
 # generate names of object files
 OBJS := $(SRCS:.c=.o)
