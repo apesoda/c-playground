@@ -35,7 +35,7 @@ int main(void) {
 	}
 
 	//load our main image file for our little guy
-	SDL_Surface* surface = IMG_Load("sprite_sheet.bmp");
+	SDL_Surface* surface = IMG_Load("sprite_sheet.png");
 	if (!surface) {
 		printf("Error rendering image: %s\n", SDL_GetError());
 		SDL_DestroyRenderer(rend);
@@ -72,7 +72,21 @@ int main(void) {
 	srcBack.y = 0;
 	srcBack.h = 32;
 	srcBack.w = 16;
+
+	//left facing
+	SDL_Rect srcLeft;
+	srcLeft.x = 32;
+	srcLeft.y = 0;
+	srcLeft.h = 32;
+	srcLeft.w = 16;
+
 	
+	//right facing
+	SDL_Rect srcRight;
+	srcRight.x = 48;
+	srcRight.y = 0;
+	srcRight.h = 32;
+	srcRight.w = 16;
 
 	SDL_Rect dest;
 	dest.h = 32;
@@ -120,6 +134,7 @@ int main(void) {
 						case SDL_SCANCODE_A:
 						case SDL_SCANCODE_LEFT:
 							left = 1;
+							active = srcLeft;					
 							break;
 						case SDL_SCANCODE_S:
 						case SDL_SCANCODE_DOWN:
@@ -128,6 +143,7 @@ int main(void) {
 							break;
 						case SDL_SCANCODE_D:
 						case SDL_SCANCODE_RIGHT:
+							active = srcRight;					
 							right = 1;
 							break;
 				}
