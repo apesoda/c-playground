@@ -35,7 +35,7 @@ int main(void) {
 	}
 
 	//load our main image file for our little guy
-	SDL_Surface* surface = IMG_Load("../game/src/sprite.bmp");
+	SDL_Surface* surface = IMG_Load("sprite_sheet.bmp");
 	if (!surface) {
 		printf("Error rendering image: %s\n", SDL_GetError());
 		SDL_DestroyRenderer(rend);
@@ -56,8 +56,29 @@ int main(void) {
 	}
 
 	//create a rectangle for our little guy to sit on
+
+	SDL_Rect active;
+
+	//front facing
+	SDL_Rect srcFront;
+	srcFront.x = 16;
+	srcFront.y = 0;
+	srcFront.h = 32;
+	srcFront.w = 16;
+
+	//back facing
+	SDL_Rect srcBack;
+	srcBack.x = 0;
+	srcBack.y = 0;
+	srcBack.h = 32;
+	srcBack.w = 16;
+	
+
 	SDL_Rect dest;
-	SDL_QueryTexture(tex, NULL, NULL, &dest.w, &dest.h);
+	dest.h = 32;
+	dest.w = 16;
+
+	//SDL_QueryTexture(tex, NULL, NULL, &dest.w, &dest.h);
 	
 	//upscale 4x to fit with the theme
 	dest.w *= 4;
@@ -78,6 +99,8 @@ int main(void) {
 	//foundation so we can actually quit the program
 	int close_requested = 0;
 
+	active = srcFront;
+
 	//input handling
 	while (!close_requested) {
 		SDL_Event event;
@@ -92,6 +115,7 @@ int main(void) {
 						case SDL_SCANCODE_W:
 						case SDL_SCANCODE_UP:
 							up = 1;
+							active = srcBack;					
 							break;
 						case SDL_SCANCODE_A:
 						case SDL_SCANCODE_LEFT:
@@ -100,6 +124,7 @@ int main(void) {
 						case SDL_SCANCODE_S:
 						case SDL_SCANCODE_DOWN:
 							down = 1;
+							active = srcFront;					
 							break;
 						case SDL_SCANCODE_D:
 						case SDL_SCANCODE_RIGHT:
@@ -167,7 +192,7 @@ int main(void) {
 		SDL_RenderClear(rend);
 
 		//draw again
-		SDL_RenderCopy(rend, tex, NULL, &dest);
+		SDL_RenderCopy(rend, tex, &active, &dest);
 		SDL_RenderPresent(rend);
 		
 		//wait 1 frame
