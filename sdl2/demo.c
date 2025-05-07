@@ -8,7 +8,7 @@
 #define WINDOW_HEIGHT (640)
 
 //this just seemed like a nice speed
-#define SPEED (150)
+#define SPEED (200)
 
 int main(void) {
 	//init SDL, self explanatory
@@ -35,7 +35,7 @@ int main(void) {
 	}
 
 	//load our main image file for our little guy
-	SDL_Surface* surface = IMG_Load("sprite_sheet.png");
+	SDL_Surface* surface = IMG_Load("assets/sprites/sprite_sheet.png");
 	if (!surface) {
 		printf("Error rendering image: %s\n", SDL_GetError());
 		SDL_DestroyRenderer(rend);
