@@ -12,7 +12,7 @@
 
 int main(void) {
 	//init SDL, self explanatory
-	if (SDL_Init(SDL_INIT_VIDEO|SDL_INIT_TIMER) !=0 ) {
+	if (SDL_Init(SDL_INIT_VIDEO|SDL_INIT_TIMER) != 0 ) {
 		printf("Error initing SDL: %s \n", SDL_GetError());
 		return 1;
 	}
@@ -27,6 +27,7 @@ int main(void) {
 	//create renderer with acceleration and vsync
 	Uint32 render_flags = SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC;
 	SDL_Renderer* rend = SDL_CreateRenderer(win, -1, render_flags);
+	SDL_SetRenderDrawColor(rend, 200, 255, 255, 120);
 	if (!rend) {
 		printf("Error creating renderer: %s\n", SDL_GetError());
 		SDL_DestroyWindow(win);
