@@ -27,7 +27,7 @@ int main(void) {
 	//create renderer with acceleration and vsync
 	Uint32 render_flags = SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC;
 	SDL_Renderer* rend = SDL_CreateRenderer(win, -1, render_flags);
-	SDL_SetRenderDrawColor(rend, 200, 255, 255, 120);
+	SDL_SetRenderDrawColor(rend, 180, 200, 200, 120);
 	if (!rend) {
 		printf("Error creating renderer: %s\n", SDL_GetError());
 		SDL_DestroyWindow(win);
