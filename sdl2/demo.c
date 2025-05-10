@@ -93,8 +93,6 @@ int main(void) {
 	dest.h = 32;
 	dest.w = 16;
 
-	//SDL_QueryTexture(tex, NULL, NULL, &dest.w, &dest.h);
-	
 	//upscale 4x to fit with the theme
 	dest.w *= 4;
 	dest.h *= 4;
